@@ -95,3 +95,83 @@ if(d.isInteger){
 else { 
     console.log(d);
 }
+
+//String length
+
+let myName = "Anes";
+let school = "Grit Academy"
+let emptyString  = "";
+let notAString = false;
+
+console.log(`The name ${myName.toUpperCase()} is ${myName.length} characters long`);
+console.log(`The name${emptyString} is ${emptyString.length} characters long`)
+console.log(`The name ${notAString} is ${notAString.length} characters long`)
+
+let lastName = "Brkic";
+let fullName;
+
+fullName = myName + " " + lastName;
+console.log(fullName.toUpperCase());
+
+//String Concatenate
+
+console.log('5+"5"');
+console.log('5' + 5);
+console.log('5 + 5');
+console.log(5 + 5);
+
+//Cases
+
+console.log('hello!'.toUpperCase());
+console.log('GREETINGS!'.toLowerCase());
+
+//Substring and slice
+
+let message = "Hello From JavaScript my Friends";
+console.log(message.substring(0,22));
+console.log(message.slice(22));
+
+let messageForSlicing = 'No, please dont slice me!';
+console.log(messageForSlicing);
+let slicedMessage = messageForSlicing.slice(11);
+console.log(slicedMessage);
+
+//Trim
+
+let badInputText = '    Hello    ';
+let trimmedText = badInputText.trim();
+console.log(trimmedText);
+
+//Split
+
+let numberPhrase = 'Zero,   One,   Two,   Three,   Four,   Five,   Six,   Seven,   Eight,   Nine';
+let numberPhraseSplit = numberPhrase.split(',');
+console.log(numberPhrase);
+
+for (let i = 0; i < numberPhraseSplit.length; i++) {
+
+    numberPhraseSplit[i] = numberPhraseSplit[i].trim();
+    
+}
+
+console.log(numberPhraseSplit);
+
+//Join
+
+let numberPhraseJoin = numberPhraseSplit.join(', ');
+console.log('joining number data split with (, ) ');
+console.log(numberPhraseJoin);
+
+//Replace
+
+let stringBefore = '50%';
+let stringAfter = stringBefore.replace('%', '$');
+console.log(stringAfter);
+
+//Uppgift
+
+let txt1 = '  Skärmskydd , 499'
+let txt2 = 'Mobiltelefon ,299'
+let txt3 = ' Telefonfodral, 89'
+let txt4 = 'Laptop,      799'
+let txt5 = 'Hörlurar  , 199'
