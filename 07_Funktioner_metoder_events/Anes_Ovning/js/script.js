@@ -16,11 +16,15 @@ console.clear();
 //Övning 1
 
 let counter = 1;
+let totalCount = 0;
 let updatedList = false;
+document.getElementById("counter").innerText = 'Dish count: ' + totalCount;
 
 
 function addDish(){
     counter++;
+    totalCount++;
+    document.getElementById("counter").innerText = 'Dish count: ' + totalCount;
     console.log('Added 1 dish to your list');
     updatedList = true;
 }
@@ -28,11 +32,27 @@ function addDish(){
 function doubleDish(){
     if(counter == 1){
         console.clear();
-        console.log('You have no dishes on your list');
+        console.error('You have no dishes on your list');
     }
     else{ 
         counter = counter*2 - 1;
+        totalCount = totalCount*2;
+        document.getElementById("counter").innerText = 'Dish count: ' + totalCount;
         console.log('Doubled the ammount of dishes by 2');
+        updatedList = true;
+    }
+}
+
+function powerDish(){
+    if(counter == 1){
+        console.clear();
+        console.error('You have no dishes on your list');
+    }
+    else{ 
+        counter = counter * counter - 1;
+        totalCount = totalCount * totalCount;
+        document.getElementById("counter").innerText = 'Dish count: ' + totalCount;
+        console.log('The ammount of dishes have increased exponentially');
         updatedList = true;
     }
 }
@@ -40,7 +60,7 @@ function doubleDish(){
 function dishCount(){
     if(counter == 1){
         console.clear();
-        console.log('You have no dishes on your list');
+        console.error('You have no dishes on your list');
     }
     else if(counter == 2){
         console.clear();
@@ -56,7 +76,7 @@ function showAll(){
 
     if(counter == 1){
         console.clear();
-        console.log('You have no dishes on your list');
+        console.error('You have no dishes on your list');
     }
     else if(updatedList == true){ 
 
@@ -73,12 +93,14 @@ function showAll(){
 function removeDish(){
     if(counter == 1){
         console.clear();
-        console.log("There are no dishes on your list");
+        console.error("There are no dishes on your list");
     }
     else if(counter > 1){
-        console.log('Removed 1 dish from your list');
+        console.warn('Removed 1 dish from your list');
         updatedList = true;
         counter--;
+        totalCount--;
+        document.getElementById("counter").innerText = 'Dish count: ' + totalCount;
     }
 
 }
@@ -87,14 +109,16 @@ function removeAll(){
 
     if(counter == 1){
         console.clear();
-        console.log("There are no dishes on your list");
+        console.error("There are no dishes on your list");
     }
     else{ 
         counter = 1;
+        totalCount = 0;
+        document.getElementById("counter").innerText = 'Dish count: ' + totalCount;
         menu = "";
         updatedList = true;
         console.clear();
-        console.log('Removed all dishes from your list');
+        console.warn('Removed all dishes from your list');
     }
 }
 
