@@ -97,3 +97,20 @@ function removeAll(){
         console.log('Removed all dishes from your list');
     }
 }
+
+
+function addUserInputParagraph(){
+    let userInput = document.getElementById('userInput');
+    let userInputText = userInput.value;
+    let newParagraph = document.createElement("p");
+    newParagraph.innerText = userInputText;
+    
+    let body = document.querySelector('body');
+    body.appendChild(newParagraph);
+}
+
+function changeColor(){
+    let body = document.querySelector('body');
+    body.style.backgroundColor = "red";
+}
+
