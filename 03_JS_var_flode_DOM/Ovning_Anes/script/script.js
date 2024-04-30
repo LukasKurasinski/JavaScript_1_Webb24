@@ -108,3 +108,14 @@ for(let i = 0; i < 52; i++){
 }
 
 ////////////////////////////////////////////////////////////////
+
+console.log();
+
+
+for(let i = 0; i < 10; i++){
+    let star = "";
+    for(let j = (i/2); j <= i; j++){
+         star = star + "*";
+    }
+    console.log(star);
+}
