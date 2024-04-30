@@ -81,9 +81,51 @@ console.log(matrix);
 
 //Splice()
 
-let listMiddleIndex = (myArray.length-1)/2;
-myArray.splice(listMiddleIndex, listMiddleIndex+1);
+console.log(myArray);
+myArray.splice(0,2,0,0);
 console.log(myArray);
 
 //Slice()
 
+myArray.slice(0,3);
+console.log(myArray);
+
+//While
+
+let i = 0;
+let j = 0;
+
+while(i < 10){
+    console.log(i);
+    i++;
+}
+
+
+do{
+    console.log(j);
+    j++;
+}   while(j < 0);
+
+let isRunning = false;
+let count = 0;
+let increment = 1;
+
+while(isRunning == true){
+    console.log(count);
+    count = count + increment;
+
+}
+
+function forwards(){
+    increment = 1;
+}
+
+function backwards(){
+    increment = -1;
+}
+
+function stop(){
+    isRunning = false;
+}
+
+setInterval(count, 1000);
