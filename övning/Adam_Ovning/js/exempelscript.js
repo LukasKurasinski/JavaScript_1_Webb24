@@ -46,3 +46,29 @@ console.log(getDriver(car));
 // Getting a list from an object
 let objektItems = car.items;
 console.log(objektItems)
+
+
+
+// Övning 8 
+function taBortDuplicerade(arr) {
+    arr.sort();
+    for (let i = arr.length-1; i > 0; i--){
+        for (let j = i-1; j >= 0; j--){
+            if(arr[i] === arr[j]){
+                //splice(start, deleteCount)
+                arr.splice(j,1);
+            }
+        }
+    }
+    return arr;
+}
+let testAray = [1,2,3,4,5,6,2,2,4,8];
+console.log(testAray);
+console.log(taBortDuplicerade(testAray));
+
+
+
+
+
+// Ny lektion med klasser och sådant
+
