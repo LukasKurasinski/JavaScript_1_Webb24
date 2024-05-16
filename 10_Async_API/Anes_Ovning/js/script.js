@@ -153,7 +153,7 @@ let loadApi = function(){
         return response.json();
     })
     .then(data => {
-        console.log('Data recieved:', data);
+        //console.log('Data recieved:', data);
         return data;
     })
     .catch(error =>{
@@ -161,7 +161,7 @@ let loadApi = function(){
     });
 }
 
-console.log(loadApi());
+//console.log(loadApi());
 
 function loadApiJoke(){
 
